@@ -141,3 +141,69 @@ void FinSallestSum(int[,] array)
 }  
     Console.Write("Cтрока с наименьшей суммой элементов =" +  (NumberString + 1));
 */
+
+//Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение
+// двух матриц.
+int row = 2;
+int column = 2;
+
+
+int[,] firstMartrix = GetMatrix(row, column); 
+int[,] secomdMartrix = GetMatrix(row, column);  
+int[,] Array =  multiplyMatrix( firstMartrix,  secomdMartrix);
+
+
+PrintMatrix(firstMartrix);
+Console.WriteLine();
+PrintMatrix(secomdMartrix);
+Console.WriteLine();
+PrintMatrix(Array);
+
+
+
+int[,] GetMatrix(int m, int n)
+{
+int[,] matrix = new int[row, column];
+for (int i = 0; i < matrix.GetLength(0); i++)
+{
+    for (int j = 0; j <matrix.GetLength(1); j++)
+   {
+        matrix[i,j] = matrix[i,j] = new Random().Next(0, 10 + 1);
+    }
+}
+        return matrix;
+}
+
+
+void PrintMatrix(int[,] array)
+{
+ for(int i = 0; i < array.GetLength(0); i++)
+  
+   {
+      for(int j = 0; j < array.GetLength(1); j++)
+       {
+        Console.Write(array[i, j] + "\t");
+       }
+       Console.WriteLine();
+   }
+}
+
+
+int[,] multiplyMatrix(int[,] firstMartrix, int[,] secomdMartrix)
+{
+  int[,] resultMatrix = new int [firstMartrix.GetLength(0), secomdMartrix.GetLength(1)];
+for (int i = 0; i < resultMatrix.GetLength(0); i++)
+  {
+    for (int j = 0; j < resultMatrix.GetLength(1); j++)
+    {int sun = 0;
+      for (int k = 0; k < firstMartrix.GetLength(1); k++)
+      {
+        resultMatrix[i,j]+= firstMartrix[i,k] * secomdMartrix[k,j];
+      }
+    }
+  }
+  return resultMatrix;
+}
+
+
+

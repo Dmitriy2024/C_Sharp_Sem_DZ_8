@@ -1,17 +1,5 @@
 ﻿
-void ChangeRows(int[,] matr)
-{
-    int lastRowIndex = matr.GetLength(0) - 1;
 
-    for (int i = 0; i < matr.GetLength(1); i++)
-    {
-        int temp = matr[0, i];
-        matr[0, i] = matr[lastRowIndex, i];   
-        matr[lastRowIndex, i] = temp; 
-    }
-}
-
-/*
 //Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию 
 //элементы каждой строки двумерного массива. 
 int row = 3;
@@ -70,7 +58,7 @@ void descending(int[,] array)
         } 
    }          
 }  
- */   
+   
 
 
 

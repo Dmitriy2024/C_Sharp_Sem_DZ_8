@@ -1,4 +1,4 @@
-﻿/*
+﻿
 void ChangeRows(int[,] matr)
 {
     int lastRowIndex = matr.GetLength(0) - 1;
@@ -10,7 +10,7 @@ void ChangeRows(int[,] matr)
         matr[lastRowIndex, i] = temp; 
     }
 }
-*/
+
 /*
 //Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию 
 //элементы каждой строки двумерного массива. 
@@ -142,6 +142,8 @@ void FinSallestSum(int[,] array)
     Console.Write("Cтрока с наименьшей суммой элементов =" +  (NumberString + 1));
 */
 
+
+/*
 //Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение
 // двух матриц.
 int row = 2;
@@ -204,6 +206,51 @@ for (int i = 0; i < resultMatrix.GetLength(0); i++)
   }
   return resultMatrix;
 }
+*/
+
+
+//Задача 60.Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого 
+//элемента.
+/*
+int[,,] array3D = new int[2, 2, 2];
+GetMatrix(array3D);
+PrintMatrix(array3D);
+
+
+void GetMatrix(int[,,] arr)
+{
+  int count =  new Random().Next(0, 10 + 1);
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            for (int k = 0; k < arr.GetLength(2); k++)
+            {
+                arr[k, i, j] += count;
+                count += 3;
+            }
+        }
+    }
+}
+
+
+void PrintMatrix(int[,,] arr)
+{
+    for (int i = 0; i < array3D.GetLength(0); i++)
+    {
+        for (int j = 0; j < array3D.GetLength(1); j++)
+        {
+ Console.WriteLine();
+            for (int k = 0; k < array3D.GetLength(2); k++)
+            {
+ Console.Write($"{array3D[i, j, k]}({i},{j},{k}) ");
+            }
+        }
+    }
+}
+*/
+
 
 
 

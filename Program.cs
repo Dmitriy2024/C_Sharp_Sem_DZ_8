@@ -150,14 +150,14 @@ int column = 2;
 
 int[,] firstMartrix = GetMatrix(row, column); 
 int[,] secomdMartrix = GetMatrix(row, column);  
-int[,] Array =  multiplyMatrix( firstMartrix,  secomdMartrix);
+int[,] productMatrices =  multiplyMatrix( firstMartrix,  secomdMartrix);
 
 
 PrintMatrix(firstMartrix);
 Console.WriteLine();
 PrintMatrix(secomdMartrix);
 Console.WriteLine();
-PrintMatrix(Array);
+PrintMatrix(productMatrices);
 
 
 
